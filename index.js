@@ -2,6 +2,17 @@ const { SIGTERM } = require('constants');
 const express = require('express');
 const app = express();
 const http = require('http');
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize('id14909306_particular', 'CARAMELOAMARELO', '7_?znIw06UM~A@s&', {
+    host: 'www.startragnarok.000webhostapp.com',
+    dialect: 'mysql'
+});
+
+sequelize.authenticate().then(function () {
+    console.log('Sucesso ao conectar')
+}).catch(function (erro) {
+    console.log('falha:' + erro)
+});
 
 //const livrosRouter = require('./livros/livros.js');
 //const gravarRouter = require('./BD/gravar.js');
@@ -23,11 +34,7 @@ app.listen(3000, function () {
     console.log('A API está funcionando!');
 });
 http.createServer(function (request, response) {
-
-    // Configura o cabeçalho da resposta com um status HTTP e um Tipo de Conteúdo
-    response.writeHead(200, { 'Content-Type': 'text/plain' });
-
-    // Manda o corpo da resposta "Olá Mundo"
+    response.setHeader("Access-Control-Allow-Origin", "*");
     response.end('Olá Mundo\n');
 }).listen(process.env.PORT || 8000)
 
