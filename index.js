@@ -29,13 +29,27 @@ BD/ler print BD in page
 //app.use('/livros',livrosRouter);
 //app.use('/gravar/BD',gravarRouter);
 //app.use('/manipular/BD',manipularRouter);
-
+const dados = [
+    {
+        info1: 1,
+        info2: 2
+    }, {
+        info1: 1,
+        info2: 2
+    }, {
+        info1: 1,
+        info2: 2
+    }, {
+        info1: 1,
+        info2: 2
+    }
+];
 app.listen(3000, function () {
     console.log('A API está funcionando!');
 });
 http.createServer(function (request, response) {
     response.setHeader("Access-Control-Allow-Origin", "*");
-    response.end('Olá Mundo\n');
+    response.end(dados);
 }).listen(process.env.PORT || 8000)
 
 // Imprime no console a URL de acesso ao servidor
