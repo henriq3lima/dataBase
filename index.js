@@ -29,7 +29,7 @@ http.createServer(function (request, response) {
 
     // Manda o corpo da resposta "Olá Mundo"
     response.end('Olá Mundo\n');
-}).listen(8000, '127.0.0.1');
+}).listen(process.env.PORT || 8000)
 
 // Imprime no console a URL de acesso ao servidor
 console.log('Servidor executando em http://127.0.0.1:8000/');
