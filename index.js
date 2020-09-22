@@ -37,7 +37,7 @@ app.listen(3000, function () {
     console.log('A API está funcionando!');
 });
 http.createServer(function (request, response) {
-    //response.setHeader("Access-Control-Allow-Origin", "*");
+    response.setHeader("Access-Control-Allow-Origin", "*");
     response.end(`
         {
             "info1": "1",
