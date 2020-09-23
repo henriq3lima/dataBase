@@ -6,7 +6,7 @@ const ytscrapRouter = require('./Youtube/scrap.js');
 
 const app = express();
 
-app.listen(8000, function () {
+app.listen(process.env.PORT || 8000, function () {
     console.log('A API está funcionando!')
 });
 app.get('/', (_, res) => {
