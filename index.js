@@ -1,6 +1,5 @@
 const { SIGTERM } = require('constants');
 const express = require('express');
-const http = require('http');
 
 const sendRouter = require('./mongodb/send.js');
 const ytscrapRouter = require('./Youtube/scrap.js');

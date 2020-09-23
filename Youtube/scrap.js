@@ -3,8 +3,7 @@ const express = require('express'),
     router = express.Router(),
     fs = require('fs'),
     request = require('request'),
-    cheerio = require('cheerio'),
-    app = express();
+    cheerio = require('cheerio');
 
 router.get('/', (_, res) => {
 
