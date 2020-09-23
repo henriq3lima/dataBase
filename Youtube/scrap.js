@@ -27,6 +27,7 @@ router.get('/', (_, res) => {
             async function f(res) {
                 await res;
             };
+            res.setHeader("Access-Control-Allow-Origin", "*");
             f(resultado).then(res.send(resultado));
 
         }
