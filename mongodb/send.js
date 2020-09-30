@@ -19,7 +19,7 @@ global.sendMongo = function sendMongo(dados) {
       await client.connect();
       console.log("Connected correctly to server");
       const db = client.db(dbName);
-      const col = db.collection("questionPtStack");
+      const col = db.collection("questionStack");
       for (i = 0; i < dados.length; i++) {
         const p = await col.insertOne(dados[i]);
         const myDoc = await col.findOne();

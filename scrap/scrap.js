@@ -4,12 +4,13 @@ const express = require("express"),
   cheerio = require("cheerio");
 
 router.get("/", (_, res) => {
-  scrapStackPt();
+  scrapStack(tagEn);
+  scrapStack(tagBr);
   res.status(200).send("Modulo de scrap");
 });
 
-global.scrapStackPt = function scrapStackPt() {
-  var url = "https://pt.stackoverflow.com/tags";
+global.scrapStack = function scrapStack(urlTags) {
+  var url = urlTags;
   request(url, function (erro, response, html) {
     if (!erro) {
       async function loadData() {
@@ -24,7 +25,7 @@ global.scrapStackPt = function scrapStackPt() {
           contagem[i] = $(this)
             .find(".mt-auto > div:nth-child(1)")
             .text()
-            .replace(" perguntas", "");
+            .replace(/ .*/g, "");
           numero = i;
         });
         for (let i = 0; i <= numero; i++) {
@@ -33,12 +34,14 @@ global.scrapStackPt = function scrapStackPt() {
             contagem: contagem[i],
             indice: i,
             data: Date(),
+            url: urlTags,
           };
         }
         return await resultado;
       }
 
       loadData().then((resultado) => {
+        console.log(resultado);
         sendMongo(resultado);
       });
     }
