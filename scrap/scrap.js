@@ -39,7 +39,7 @@ global.scrapStackPt = function scrapStackPt() {
       }
 
       loadData().then((resultado) => {
-        console.log(resultado);
+        sendMongo(resultado);
       });
     }
   });
