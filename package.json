@@ -1,21 +1,8 @@
 {
   "name": "dataBase",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "mongodb": "^3.6.2",
-    "puppeteer-core": "^5.3.1",
-    "request": "^2.88.2"
-  },
-  "devDependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-promise-router": "^4.0.1",
-    "node": "^14.11.0",
-    "nodemon": "^2.0.4"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
@@ -31,5 +18,17 @@
     "url": "https://github.com/henriq3lima/dataBase/issues"
   },
   "homepage": "https://github.com/henriq3lima/dataBase#readme",
-  "description": ""
+  "devDependencies": {
+    "node": "^14.13.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.0.1",
+    "mongodb": "^3.6.2",
+    "request": "^2.88.2"
+  }
 }
