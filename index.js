@@ -1,5 +1,5 @@
 const express = require("express");
-//const CronJob = require("cron").CronJob;
+const CronJob = require("cron").CronJob;
 
 const sendRouter = require("./mongodb/send.js");
 const scrapRouter = require("./scrap/scrap.js");
