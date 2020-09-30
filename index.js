@@ -17,12 +17,14 @@ app.get("/", (_, res) => {
   res.status(200).send("API-Banco NoSQL SQL");
 });
 
-// let dateStart = new Date("2020-09-30T15:00:00.000Z");
+let dateStart = new Date("2020-09-30T14:40:00.000Z");
 
-// const job = new CronJob(dateStart, function () {
-//   inicial();
-// });
-// job.start();
+const job = new CronJob(dateStart, function () {
+  scrapStack(tagEn);
+  scrapStack(tagBr);
+});
+job.start();
+
 // inicial();
 // function inicial() {
 //   var tagBr = "https://pt.stackoverflow.com/tags";
