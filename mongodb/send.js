@@ -3,7 +3,7 @@ const express = require("express"),
 
 console.log("mongodb/send");
 router.get("/", (_, res) => {
-  res.status(200).send("Modulo de envio de dados para o MongoDB");
+  res.status(200).send("Modulo de envio de scrap");
 });
 
 // global.sendMongo = function sendMongo(dados) {

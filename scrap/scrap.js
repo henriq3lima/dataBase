@@ -5,6 +5,7 @@ const express = require("express"),
 
 router.get("/", (_, res) => {
   //  scrapStackPt();
+  res.status(200).send("Modulo de envio de dados para o MongoDB");
 });
 
 // global.scrapStackPt = function scrapStackPt() {
