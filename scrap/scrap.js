@@ -31,7 +31,7 @@ global.scrapStackPt = function scrapStackPt() {
             tag: tag[i],
             contagem: contagem[i],
             indice: i,
-            data: Date(),
+            //data: Date(),
           };
         }
         return await resultado;
