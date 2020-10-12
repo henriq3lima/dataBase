@@ -1,8 +1,8 @@
 const express = require("express"),
   router = express.Router();
 
-console.log("mongodb/send");
 router.get("/", (_, res) => {
+  console.log("mongodb/send");
   res.status(200).send("Modulo de envio de dados para o MongoDB");
 });
 

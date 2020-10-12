@@ -4,9 +4,11 @@ const express = require("express"),
   cheerio = require("cheerio");
 
 router.get("/", (_, res) => {
+  var tagBr = "https://pt.stackoverflow.com/tags";
+  var tagEn = "https://stackoverflow.com/tags";
   scrapStack(tagEn);
   scrapStack(tagBr);
-  res.status(200).send("Modulo de scrap");
+  res.status(200).send("Realizando Scrap");
 });
 
 global.scrapStack = function scrapStack(urlTags) {
